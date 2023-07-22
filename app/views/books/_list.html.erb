@@ -1,0 +1,14 @@
+<h2 class="mt-3">New book</h2>
+<!-- form_with部分 -->
+<%= form_with model:Book do |f| %>
+<div class="flom-group">
+  <laber for="block_title" >Title</laber>
+  <%= f.text_field :title, class: 'form-control' %>
+</div>
+<div class="flom-group">
+  <laber for="block_Opinion" >Opinion</laber>
+  <%= f.text_area :body, class: 'form-control' %>
+</div>
+  <%= f.submit 'Create book', class: "btn btn-success" %>
+
+  <% end %>
