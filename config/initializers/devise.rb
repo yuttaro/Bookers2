@@ -197,7 +197,7 @@ Devise.setup do |config|
   # config.lock_strategy = :failed_attempts
 
   # Defines which key will be used when locking and unlocking an account
-  # config.authentication_keys = [:email]
+  config.authentication_keys = [:name]
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email
