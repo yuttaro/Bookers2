@@ -1,4 +1,13 @@
 <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+  <% if @book.errors.any? %>
+
+    <%= @book.errors.count %>error
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
   <h1>Editing Book</h1>
   <%= form_with model: @book do |f| %>
   <div class="form-group">
